@@ -19,6 +19,16 @@ in the backend:
         after i made the very basic crud components with routes and controller folders, i made another folder called src and put everything in there because its convention
             because of this, in the scripts where we run 'npm run dev' and 'npm run start' we have to update it so that is run 'nodemon src/server.js' and 'node src/server.js'
                 and for consitency update the "main" in package.json as well (you dont have to but why not)
+        install mongoose in the backend directory
+        make new folder called config so we can put our connections to the database
+            in the server we are going to use it to connect to there
+        made .env file under backend folder and added mongo_uri
+            install dotenv and require it in server.js
+            make sure to add port into the dotenv file as well
+        created models folder
+            a convention is to name the model with first letter capitalized and singular
+
+        
 
 
 in the front end:
