@@ -1,0 +1,25 @@
+MERN stack
+create notes with title and description. we have update and delete actions
+plus deployment
+and rate limiting
+
+first start by Building the API
+once everything is working, we start the frontend
+
+create backend and frotend folder
+in the backend:
+    build the API
+        
+        initilaize node.js application
+            npm init -y
+        install express and nodemon
+                    npm install nodemon -D
+                    in package.json change the script to nodemon instead of node
+                    in development we'll use npm run dev which uses nodemon. put once we deploy we'll use npm run start which uses the regular ndoe command
+        after i made the very basic crud components with routes and controller folders, i made another folder called src and put everything in there because its convention
+            because of this, in the scripts where we run 'npm run dev' and 'npm run start' we have to update it so that is run 'nodemon src/server.js' and 'node src/server.js'
+                and for consitency update the "main" in package.json as well (you dont have to but why not)
+
+
+in the front end:
+    react application
