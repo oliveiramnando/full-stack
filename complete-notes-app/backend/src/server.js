@@ -4,8 +4,10 @@ const express = require("express");
 const notesRoutes = require('./routes/notesRoutes.js');
 const { connectDB } = require('./config/db.js');
 
-const app = express();
 const PORT = process.env.PORT || 5001;
+const app = express();
+
+app.use(express.json());
 
 connectDB();
 
