@@ -27,6 +27,32 @@ in the backend:
             make sure to add port into the dotenv file as well
         created models folder
             a convention is to name the model with first letter capitalized and singular
+        controller functions
+        middleware and rate limiting
+            app.use in server.js 
+            rate limiting  
+                a way to control how often someone can do something on a website or app 
+                like how many times they can refresh a page or make a request to an API
+                100 requests per user every 15 minutes
+                status code - 429
+                prevents abuse and prevents server getting overwhelmed
+                    using upstash for this
+                        using redis for rate limiting
+                
+        using upstash and redis:
+            - create database
+            - get the enviornment variables:
+                UPSTASH_REDIS_REST_URL
+                UPSTASH_REDIS_REST_TOKEN
+            - install package   
+                npm i @upstash/ratelimit @upstash/redis
+            - under config create upstash.js
+                only a few lines of codes for rate limiting
+
+        created middleware folder
+            rateLimiter.js file was created
+        
+        mounter ratelimiter on server.js
 
         
 
