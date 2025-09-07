@@ -7,6 +7,7 @@ first start by Building the API
 once everything is working, we start the frontend
 
 create backend and frotend folder
+
 in the backend:
     build the API
         
@@ -54,8 +55,42 @@ in the backend:
         
         mounter ratelimiter on server.js
 
-        
-
-
 in the front end:
     react application
+    npm create vite@latest .
+        go with react and js
+    npm install
+    npm run dev
+    we first will set up the pages
+        home page, detail page, create page using react router
+        npm i react-router
+        npm i react-hot-toast 
+            ^ for notificaitons
+    delete app.css file under /frontend/src/
+    and delete the content in index.css and App.jsx
+    delete the asseets folder
+    get es7 exntension for snippets
+    rafce short cut for the snippet in App.jsx
+    under main.jsx we will wrap our application with BrowserRouter 
+        we import BrowserRouter from react-router
+    now we create pages folder under src
+    add 3 page .jsx file
+    in app.jsx add the routes
+    
+    now set up react hot toast
+        add it in main.jsx
+    
+    now we set up tailwind css MAKE SURE YOURE USING INSTALL FOR VITE
+        npm install -D tailwindcss@3 postcss autoprefixer
+        npx tailwindcss init -p
+
+        delete the entire content of the tailwind.config.js file
+            and paste in the one from the documentation
+        and update index.css file with the one from tailwind docs
+    now we setting up daisyui 
+        daisyui.com
+        tailwind css library - very useful
+        npm i -D daisyui@4.12.24        
+        add it to tailwind.config.js plugins
+        under tailwind.config.js add daisyui and theme under that, and add the array of themes you want
+        in app.jsk add data-theme to the div wrapping everything
