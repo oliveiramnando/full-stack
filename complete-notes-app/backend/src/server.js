@@ -3,16 +3,18 @@ const express = require("express");
 
 const notesRoutes = require('./routes/notesRoutes.js');
 const { connectDB } = require('./config/db.js');
+const rateLimiter = require('./middlewares/rateLimiter.js');
 
-const PORT = process.env.PORT || 5001;
 const app = express();
+const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
-
-connectDB();
+app.use(rateLimiter);
 
 app.use('/api/notes', notesRoutes);
- 
-app.listen(process.env.PORT, () => {
-    console.log("Server started on PORT:", PORT);
-});
+
+connectDB().then(() => { // connect to the DB and then start listening
+    app.listen(process.env.PORT, () => {
+        console.log("Server started on PORT:", PORT);
+    });
+})
