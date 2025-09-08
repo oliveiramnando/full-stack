@@ -94,3 +94,35 @@ in the front end:
         add it to tailwind.config.js plugins
         under tailwind.config.js add daisyui and theme under that, and add the array of themes you want
         in app.jsk add data-theme to the div wrapping everything
+    npm i lucide-react
+        for icons
+    npm i axios 
+        for replace fetch api with this
+    
+    created components folder   
+        created Navbar.jsx file
+            created navbar
+        created a ratelimited ui
+
+    finally working on HomePage.jsx
+        import navbar at top
+        created a state before the return for the rate limiting
+            import use state
+        created state for notes and loading
+            *** learn more about usestate and useEffect ***
+        create useEffect
+            to fetch it
+        using axios to actually fetch it
+        have to fix the CORS error
+            cross-origin resource sharing
+                CORS is a brower security ryle
+                when a website tries to get data from another website - like front end calling an api on a different domain -
+                    the browser might block it for security reasons
+            in backend/.../server.js add middlware
+                npm i cors
+                    in the backend folder
+                cors should be above ratelimiter
+        
+        now actually displaying the notes
+        create notes card under components
+        created lib and utils.js file for date and time for the note
