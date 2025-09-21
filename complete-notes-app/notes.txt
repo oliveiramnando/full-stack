@@ -135,3 +135,5 @@ in the front end:
             now we gonna send the request 
                 have some validation
             use axios to post
+    
+    created a global isntace (under lib), axios.js so we dont have to write the axios thing every time

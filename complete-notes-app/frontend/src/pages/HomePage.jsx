@@ -2,9 +2,9 @@ import { useState } from 'react'
 import Navbar from "../components/Navbar.jsx"
 import RateLimitedUI from '../components/RateLimitedUI.jsx'
 import { useEffect } from 'react'
-import axios from "axios"
 import toast from "react-hot-toast"
 import NoteCard from '../components/NoteCard.jsx'
+import api from "../lib/axios.js"
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
@@ -17,7 +17,7 @@ const HomePage = () => {
         // const res = await fetch("http://localhost:PORT/api.notes")
         // const data = await res.json();
         // console.log(data);
-        const res = await axios.get("http://localhost:5001/api/notes");
+        const res = await api.get("/notes"); // now its been prefixed with the axios in lib
         console.log(res.data);
         setNotes(res.data.result); // updates the notes; have to use .result because thats what i send in the backend
         setIsRateLimited(false); // if get data then we are not rate limited
