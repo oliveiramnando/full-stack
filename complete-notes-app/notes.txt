@@ -126,3 +126,12 @@ in the front end:
         now actually displaying the notes
         create notes card under components
         created lib and utils.js file for date and time for the note
+
+    working on CreatePage.jsx
+        created container for Create New note
+        used form to handle input data (with the value thing)
+        created handleSubmit function to handle submit
+            it refreshed every time so we have to get the event and prevent default behavior 
+            now we gonna send the request 
+                have some validation
+            use axios to post
